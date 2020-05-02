@@ -128,7 +128,7 @@ class PrintingVisitor(Visitor):
         return join([
             'type',
             node.name,
-            wrap('implements ', join(node.interfaces, ', ')),
+            wrap('implements ', join(node.interfaces, ' & ')),
             join(node.directives, ' '),
             block(node.fields)
         ], ' ')
